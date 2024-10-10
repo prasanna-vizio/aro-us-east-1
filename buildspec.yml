@@ -1,0 +1,8 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      # Deploy Lambda Function lambda-aro-get-document-number
+      - echo "Deploy Lambda Function lambda-aro-get-document-number ..."
+      - aws cloudformation deploy --template-file lambda-aro-get-document-number.yml --stack-name lambda-aro-get-document-number --capabilities CAPABILITY_NAMED_IAM
